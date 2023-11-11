@@ -1,0 +1,70 @@
+/* ============================ FilterBar.js ==================== */
+
+
+/* filterbar styles */
+.filterBar{
+    box-shadow: 1px 1px 8px 1px grey;
+    height: 0px;
+    font-size: 1.1rem;
+    background-image:linear-gradient(to top, #3056af 0%, #0e1012 100%);
+    font-weight: 600;
+    display: flex;
+    flex-direction: row;
+    color:#4ca6dd;
+    border-radius: 5px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* filter bar heading */
+.filterBar h1{
+    color:#752bc3;
+}
+
+/* sub heading inside filter bar */
+.filterBar span{
+    color:#752bc3;
+}
+
+/* price range to filter items */
+.priceRange{
+    text-align: center;
+}
+
+/* price range slider */
+.priceRange input {
+    width: 100%;
+    height: 5px;
+}
+
+/* category of the products */
+.categoryBox{
+    display: flex;
+}
+
+/* radio buttons inside category */
+.categoryBox input{
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+
+/* Default styles for FilterBar.js */
+
+/* Styles for screens up to 768px wide */
+@media (max-width: 768px) {
+    .filterBar {
+        height: auto; /* Adjust the height for smaller screens */
+    }
+
+    .priceRange {
+        text-align: left; /* Adjust text alignment for price range on smaller screens */
+    }
+}
+
+/* Styles for screens up to 480px wide */
+@media (max-width: 480px) {
+    .filterBar {
+        font-size: 0.9rem; /* Decrease font size for filter bar on smaller screens */
+    }
+}

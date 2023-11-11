@@ -1,0 +1,144 @@
+/* =========================== MainContent.js ===================  */
+
+/* container for all the products */
+.itemContainer{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(20%, 1fr)); /* Adjust column size as needed */
+    gap: 2%; 
+}
+
+/* =========================== ItemCard.js ===========================  */
+
+/* single item container */
+.cardContainer{
+    display: flex;
+    box-shadow: 0px 0px 2px 2px grey;
+    margin: 2%;
+    padding: 5px;
+    flex-direction: column;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 5px;
+}
+
+/* image container of product */
+.imageContainer{
+    height: 80%;
+    width: 100%;
+}
+
+/* image within the container */
+.imageContainer img{
+    width: 100%;
+    height: 100%;
+}
+
+/* product description */
+.itemInfo{
+    width: 100%;
+    height: 20%;
+}
+
+/* container of name and price */
+.namePrice{
+    display: flex;
+    height: 45%;
+    text-align: center;
+}
+
+/* name of the product */
+.name{
+    text-align: left;
+    width: 75%;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    height: 94%;
+    font-size: 17px;
+}
+
+/* price of the product */
+.price{
+    width: 25%;
+    color: #20dc75;
+    font-weight: 700;
+    height: 95%;
+}
+
+/* button container within the item */
+.btnContainer{
+    height: 55%;
+}
+
+/* button  inside the container */
+.btnContainer button{
+    width: 100%;
+    height: 100%;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    color: white;
+}
+
+/* add to cart button */
+.addBtn{
+    background-image:linear-gradient(to right, #cf7bb2 0%, #2f9fd9 100%);
+}
+
+/* add button on hovering over it */
+.addBtn:hover{
+    background-image: none;
+    border: 2px solid #cf7bb2;
+    color: #cf7bb2;
+    font-weight: 700;
+}
+
+
+/* container containing filter bar and product list */
+.mainContainer{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.mainContainer > div {
+    margin: 10px;
+    padding: 37px;
+    width: 100%;
+}
+
+
+/* Default styles for ItemCard.js */
+
+/* Styles for screens up to 768px wide */
+@media (max-width: 768px) {
+    .cardContainer {
+        width: 100%; /* Reset width for item card on smaller screens */
+        margin: 2%; /* Adjust margin for item card on smaller screens */
+        height: auto;
+    }
+
+    .itemInfo {
+        height: 15%; /* Adjust the height of the item info on smaller screens */
+    }
+
+    .name {
+        font-size: 0.9rem; /* Decrease font size for the product name on smaller screens */
+    }
+
+    .price {
+        font-size: 1rem; /* Adjust font size for the product price on smaller screens */
+    }
+}
+
+
+/* Default styles for MainContent.js */
+
+/* Styles for screens up to 768px wide */
+@media (max-width: 768px) {
+    .mainContainer {
+        /* padding: 0 2%; Adjust padding for item container on smaller screens */
+        margin: 1px;
+        padding: 13px;
+        width: 100%;
+    }
+}
+

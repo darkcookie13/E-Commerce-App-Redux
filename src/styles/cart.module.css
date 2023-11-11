@@ -1,0 +1,214 @@
+/* this are the styles pages */
+/* ========================== Cart.js ========================  */
+
+/* page's maincontainer */
+.mainContainer{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+ /* div within the mainContainer */
+.mainContainer > div {
+    margin: 15px;
+    width: 100%;;
+}
+
+/* cart page header containing cart details */
+.header{
+    height: 60px;
+    background-color: #162b3370;
+    box-shadow: 1px 1px 8px 1px grey;;
+    padding:5px ;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    color: #e5a2ea;
+    border-radius: 5px;
+}
+
+/* styles for cart detail inside header */
+.header small, .cartDetail{
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+/*  cartDetail container */
+.cartDetail{
+    display: flex;
+    justify-content: space-around;
+}
+
+/* div inside cart detail */
+.cartDetail > div{
+    margin: 10px;
+    padding: 5px;
+    text-align: center;
+}
+
+/*  button inside cart detail */
+.cartDetail button{
+    margin-top: 10px;
+    margin-bottom: 5px;
+    width: 100px;
+    height: 30px;
+    border: none;
+    color: white;
+}
+
+/* common styles for button inside the cart detail */
+.cartDetail button:hover{
+    background-color: white;
+}
+
+/* empty cart button */
+.removeAll{
+    background-color: #dd940d;
+}
+
+/* purchase button */
+.purchaseAll{
+    background-color: #db2cc2;
+}
+
+/* style on hover over button */
+.removeAll:hover{
+    color: #dd940d;
+    border: 2px solid #dd940d;
+}
+
+/* style on hover over button */
+.purchaseAll:hover{
+    color: #db2cc2;
+    border: 2px solid #db2cc2;
+}
+
+
+/* ================================ CartItem.js ========================= */
+
+
+/* image container within the product card */
+.imageContainer{
+    height: 70%;
+}
+
+/* image inside the container */
+.imageContainer img{
+    height: 100%;
+    width: 100%;
+}
+
+/* product info */
+.itemInfo{
+    width: 100%;
+    height: 30%;
+}
+
+/* div inside product info */
+.itemInfo > div{
+    width: 100%;
+    overflow: hidden;
+    text-overflow:ellipsis ;
+}
+
+/* name and price container */
+.namePrice{
+    height: 26%;
+    font-size: 1rem;
+}
+
+/* price and quantity container */
+.priceQuant{
+    height: 37%;
+    display: flex;
+    justify-content: space-between;
+    color: #0a0aff;
+}
+
+/* product quantity */
+.quantity{
+    color:blueviolet;
+}
+
+/* reduce quantity */
+.minus{
+    color:#771087;
+}
+
+/* increase quantity */
+.plus{
+    color:#1bc22c;
+}
+
+/* button container */
+.btnContainer{
+  height: 37%;  
+}
+
+/* remove from cart button */
+.removeBtn{
+    width: 100%;
+    height: 100%;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    background-image: linear-gradient(to top, #3056af 0%, #0e1012 100%);
+}
+
+/* style on hover */
+.removeBtn:hover{
+    background-image: none;
+    border: 2px solid #6b0c17;
+    color: #db3535d0;
+    font-weight: 700;
+}
+
+
+/* Default styles for cart and cart items */
+
+/* Styles for screens up to 768px wide */
+@media (max-width: 768px) {
+    .mainContainer > div {
+        margin: 10px; /* Adjust the margin for smaller screens */
+        width: 100%;
+    }
+
+    .header {
+        padding: 5px;
+        height: auto; /* Adjust the header height for smaller screens */
+    }
+
+    .cartDetail {
+        flex-direction: column; /* Stack cart details vertically on smaller screens */
+    }
+
+    .cartDetail > div {
+        margin: 5px; /* Adjust margin for cart details on smaller screens */
+    }
+}
+
+/* Styles for screens up to 480px wide */
+@media (max-width: 480px) {
+    .itemInfo {
+        font-size: 0.9rem; /* Decrease font size for product info on smaller screens */
+    }
+
+    .namePrice {
+        font-size: 0.8rem; /* Decrease font size for product name and price on smaller screens */
+    }
+
+    .priceQuant {
+        font-size: 0.9rem; /* Decrease font size for price and quantity on smaller screens */
+    }
+
+    .quantity, .minus, .plus {
+        font-size: 0.8rem; /* Decrease font size for quantity buttons on smaller screens */
+    }
+
+    .removeBtn {
+        font-size: 1rem; /* Decrease font size for remove button on smaller screens */
+    }
+}
+
+

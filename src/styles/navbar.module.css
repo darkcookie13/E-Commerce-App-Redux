@@ -1,0 +1,94 @@
+/* Default styles for navbar */
+.navbarContainer {
+    background-image: linear-gradient(to right, #9f139b 17%, #0b3e6d 33%, #2262be 92%);
+    width: 90%;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 5%;
+    font-size: 1.2rem;
+    font-weight: 500;
+    position: sticky;
+    top: 0;
+    z-index: 99;
+    color: white;
+}
+
+/* App name inside navbar */
+.appName a {
+    color: #1bf2db;
+}
+.appName a:hover {
+    color: rgb(255, 255, 255);
+}
+
+/* Navigation links container */
+.navLinks {
+    
+    float: right;
+}
+
+/* Single link within the navLinks */
+.navLinks span {
+    margin: 0px 10px;
+    cursor: pointer;
+}
+
+/* Styling for links */
+.navLinks a {
+    color: white;
+}
+
+/* Style on hover over the links */
+.navLinks a:hover {
+    color: black;
+}
+.hamburgerIcon.hide{
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .navbarContainer {
+        height: 54px; /* Adjust the height for smaller screens */
+        width: 91%;
+    }
+}
+
+/* Styles for the hamburger icon when the screen is small */
+@media (max-width: 768px) {
+    /* Show the navigation links when the screen size is reduced */
+    .navLinks{
+        display: none;
+    }
+    .appName{
+        margin-left:-35px; ;
+    }
+    .navLinks.show {
+        display: block;
+        position: absolute;
+        top: 50px;
+        right: 0;
+        background: #2262be;
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Style the links in the hamburger menu */
+    .navLinks.show a {
+        display: block;
+        padding: 10px 0;
+    }
+
+    /* Hide the hamburger icon when navigation links are shown or when screen size is greater than 700px */
+    .hamburgerIcon.hide {
+        display: block;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbarContainer {
+        width: 50%;
+    }
+}
